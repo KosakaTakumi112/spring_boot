@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.app.controller.UserControllerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-05-12T04:16:03" hostname="d36963f9b121" time="0.96">
+  <properties/>
+  <testcase name="お問合せ作成画面が問題なく表示される()" classname="com.example.app.controller.UserControllerTest" time="0.361"/>
+  <testcase name="新規お問合せ作成後確認画面が表示される()" classname="com.example.app.controller.UserControllerTest" time="0.056"/>
+  <testcase name="確認画面からお問合せ作成後完了画面が表示される()" classname="com.example.app.controller.UserControllerTest" time="0.33"/>
+  <testcase name="お問合せ一覧画面が問題なく表示される()" classname="com.example.app.controller.UserControllerTest" time="0.209"/>
+  <system-out><![CDATA[2022-05-12 04:15:48.486  INFO 539 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.app.controller.UserControllerTest], using SpringBootContextLoader
+2022-05-12 04:15:48.498  INFO 539 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.app.controller.UserControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-05-12 04:15:48.500  INFO 539 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.app.controller.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-05-12 04:15:48.508  INFO 539 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.app.AppApplication for test class com.example.app.controller.UserControllerTest
+2022-05-12 04:15:48.511  INFO 539 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-05-12 04:15:48.514  INFO 539 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3e6a266f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5c8a9e9f, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@504a076d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@682faf63, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@799a557, org.springframework.test.context.support.DirtiesContextTestExecutionListener@f6fad5d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@f9eb2b2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1adf4095, org.springframework.test.context.event.EventPublishingTestExecutionListener@5026fd84, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2251a798, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@58209a42, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@389bb23b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5fb6b271, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@70f4b378, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2cdac5ae]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.7)
+
+2022-05-12 04:15:48.768  INFO 539 --- [    Test worker] c.e.app.controller.UserControllerTest    : Starting UserControllerTest using Java 15.0.2 on d36963f9b121 with PID 539 (started by root in /srv)
+2022-05-12 04:15:48.771  INFO 539 --- [    Test worker] c.e.app.controller.UserControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2022-05-12 04:15:48.798 TRACE 539 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@22090c1d, started on Thu May 12 04:15:48 UTC 2022
+2022-05-12 04:15:50.349  INFO 539 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-12 04:15:50.408  INFO 539 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interfaces.
+2022-05-12 04:15:51.098 TRACE 539 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : No 'messageSource' bean, using [Empty MessageSource]
+2022-05-12 04:15:51.100 TRACE 539 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : No 'applicationEventMulticaster' bean, using [SimpleApplicationEventMulticaster]
+2022-05-12 04:15:51.399  INFO 539 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2022-05-12 04:15:51.421  INFO 539 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2022-05-12 04:15:51.578  INFO 539 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-12 04:15:51.750  INFO 539 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-12 04:15:51.928  INFO 539 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-12 04:15:51.930  INFO 539 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-12 04:15:53.591  WARN 539 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-12 04:15:54.326 DEBUG 539 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-05-12 04:15:54.511 TRACE 539 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.e.a.AppApplication:
+	{ [/]}: helloWorld()
+2022-05-12 04:15:54.514 TRACE 539 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.e.a.c.UserController:
+	{GET [/users]}: index(Model)
+	{GET [/users/new]}: newForm(Model)
+	{POST [/users]}: create(User)
+	{POST [/users/confirm]}: confirm(String,String,String,Model)
+2022-05-12 04:15:54.519 TRACE 539 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2022-05-12 04:15:54.523 DEBUG 539 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2022-05-12 04:15:54.580  INFO 539 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-12 04:15:54.912 DEBUG 539 --- [    Test worker] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2022-05-12 04:15:55.016 TRACE 539 --- [    Test worker] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2022-05-12 04:15:55.125 TRACE 539 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2022-05-12 04:15:55.127 TRACE 539 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2022-05-12 04:15:55.131 DEBUG 539 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-05-12 04:15:55.230 DEBUG 539 --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-05-12 04:15:57.132  INFO 539 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-05-12 04:15:57.134  INFO 539 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-05-12 04:15:57.137  INFO 539 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2022-05-12 04:16:03.317 TRACE 539 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Using LifecycleProcessor [org.springframework.context.support.DefaultLifecycleProcessor@2d981b7b]
+2022-05-12 04:16:03.326  INFO 539 --- [    Test worker] c.e.app.controller.UserControllerTest    : Started UserControllerTest in 14.807 seconds (JVM running for 111.815)
+2022-05-12 04:16:03.433 TRACE 539 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.app.controller.UserController#newForm(Model)
+2022-05-12 04:16:03.436 TRACE 539 --- [    Test worker] o.s.web.method.HandlerMethod             : Arguments: [{}]
+2022-05-12 04:16:03.439 TRACE 539 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2022-05-12 04:16:03.562 DEBUG 539 --- [    Test worker] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*' given [*/*]
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/new
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.app.controller.UserController
+           Method = com.example.app.controller.UserController#newForm(Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = users/new
+             View = null
+        Attribute = contactForm
+            value = com.example.app.entity.ContactForm@19348e7
+           errors = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>New Contact</title>
+    <link
+      rel="stylesheet"
+      href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>New Contact</h1>
+      <form
+        action="/users/confirm"
+        method="post"
+      >
+        <div class="form-group">
+          <label class="control-label">名前</label>
+          <input
+            class="form-control"
+            type="text"
+            name="name" id="name" value=""
+          />
+        </div>
+        <div class="form-group">
+          <label class="control-label">メールアドレス</label>
+          <input
+            class="form-control"
+            type="text"
+            name="email" id="email" value=""
+          />
+        </div>
+        <div class="form-group">
+          <label class="control-label">お問合せ内容</label>
+          <input
+            class="form-control"
+            type="text"
+            name="inquiry" id="inquiry" value=""
+          />
+        </div>
+        <button class="btn btn-primary" type="submit">作成</button>
+      </form>
+      <div class="pull-right">
+        <a class="btn btn-link" href="/users">一覧画面へ</a>
+      </div>
+    </div>
+    <script src="/webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2022-05-12 04:16:03.752 TRACE 539 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.app.controller.UserController#confirm(String, String, String, Model)
+2022-05-12 04:16:03.756 TRACE 539 --- [    Test worker] o.s.web.method.HandlerMethod             : Arguments: [a, aa, aaa, {}]
+2022-05-12 04:16:03.759 TRACE 539 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2022-05-12 04:16:03.760 DEBUG 539 --- [    Test worker] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*' given [*/*]
+2022-05-12 04:16:03.811 TRACE 539 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.app.controller.UserController#create(User)
+2022-05-12 04:16:03.829 TRACE 539 --- [    Test worker] o.s.web.method.HandlerMethod             : Arguments: [{id:null,name:a,email:aa,inquiry:aaa}]
+2022-05-12 04:16:04.084 TRACE 539 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2022-05-12 04:16:04.086 DEBUG 539 --- [    Test worker] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*' given [*/*]
+2022-05-12 04:16:04.142 TRACE 539 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.app.controller.UserController#index(Model)
+2022-05-12 04:16:04.145 TRACE 539 --- [    Test worker] o.s.web.method.HandlerMethod             : Arguments: [{}]
+2022-05-12 04:16:04.161 TRACE 539 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2022-05-12 04:16:04.163 DEBUG 539 --- [    Test worker] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*' given [*/*]
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.app.controller.UserController
+           Method = com.example.app.controller.UserController#index(Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = users/index
+             View = null
+        Attribute = users
+            value = [{id:1,name:aaa,email:aa@aa.com,inquiry:aaaaa}, {id:2,name:aaa,email:aaa,inquiry:aaa}, {id:3,name:a,email:a,inquiry:a}, {id:4,name:a,email:a,inquiry:a}, {id:5,name:a,email:aaaa,inquiry:aaaa}, {id:6,name:a,email:aa,inquiry:aaa}, {id:7,name:a,email:aa,inquiry:aaa}, {id:8,name:aa,email:aa,inquiry:aaa}, {id:9,name:aa,email:aa,inquiry:aaa}, {id:10,name:a,email:aa,inquiry:aaa}, {id:11,name:a,email:aa,inquiry:aaa}, {id:12,name:a,email:aa,inquiry:aaa}, {id:13,name:a,email:aa,inquiry:aaa}, {id:14,name:a,email:aa,inquiry:aaa}, {id:15,name:a,email:aa,inquiry:aaa}, {id:17,name:a,email:aa,inquiry:aaa}, {id:19,name:a,email:aa,inquiry:aaa}, {id:21,name:a,email:aa,inquiry:aaa}]
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>一覧画面</title>
+    <link
+      rel="stylesheet"
+      href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>一覧画面</h2>
+      
+      <table class="table">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>名前</th>
+            <th>メールアドレス</th>
+            <th>お問合せ内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <td>1</td>
+          <td>aaa</td>
+          <td>aa@aa.com</td>
+          <td>aaaaa</td>
+        </tbody>
+        <tbody>
+          <td>2</td>
+          <td>aaa</td>
+          <td>aaa</td>
+          <td>aaa</td>
+        </tbody>
+        <tbody>
+          <td>3</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+        </tbody>
+        <tbody>
+          <td>4</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+        </tbody>
+        <tbody>
+          <td>5</td>
+          <td>a</td>
+          <td>aaaa</td>
+          <td>aaaa</td>
+        </tbody>
+        <tbody>
+          <td>6</td>
+          <td>a</td>
+          <td>aa</td>
+          <td>aaa</td>
+        </tbody>
+        <tbody>
+          <td>7</td>
+          <td>a</td>
+          <td>aa</td>
+          <td>aaa</td>
+        </tbody>
+        <tbody>
+          <td>8</td>
+          <td>aa</td>
+          <td>aa</td>
+          <td>aaa</td>
+        </tbody>
+        <tbody>
+          <td>9</td>
+          <td>aa</td>
+          <td>aa</td>
+          <td>aaa</td>
+        </tbody>
+        <tbody>
+          <td>10</td>
+          <td>a</td>
+          <td>aa</td>
+          <td>aaa</td>
+        </tbody>
+        <tbody>
+          <td>11</td>
+          <td>a</td>
+          <td>aa</td>
+          <td>aaa</td>
+        </tbody>
+        <tbody>
+          <td>12</td>
+          <td>a</td>
+          <td>aa</td>
+          <td>aaa</td>
+        </tbody>
+        <tbody>
+          <td>13</td>
+          <td>a</td>
+          <td>aa</td>
+          <td>aaa</td>
+        </tbody>
+        <tbody>
+          <td>14</td>
+          <td>a</td>
+          <td>aa</td>
+          <td>aaa</td>
+        </tbody>
+        <tbody>
+          <td>15</td>
+          <td>a</td>
+          <td>aa</td>
+          <td>aaa</td>
+        </tbody>
+        <tbody>
+          <td>17</td>
+          <td>a</td>
+          <td>aa</td>
+          <td>aaa</td>
+        </tbody>
+        <tbody>
+          <td>19</td>
+          <td>a</td>
+          <td>aa</td>
+          <td>aaa</td>
+        </tbody>
+        <tbody>
+          <td>21</td>
+          <td>a</td>
+          <td>aa</td>
+          <td>aaa</td>
+        </tbody>
+      </table>
+    </div>
+    <script src="/webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/gargoylesoftware/htmlunit/javascript/host/css/StyleAttributes$Definition.
+	at org.jacoco.agent.rt.internal_3570298.CoverageTransformer.transform(CoverageTransformer.java:94)
+	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:246)
+	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:563)
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1016)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:151)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:825)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:723)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:646)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:604)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3325)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2466)
+	at com.gargoylesoftware.htmlunit.javascript.configuration.AbstractJavaScriptConfiguration.process(AbstractJavaScriptConfiguration.java:233)
+	at com.gargoylesoftware.htmlunit.javascript.configuration.AbstractJavaScriptConfiguration.getClassConfiguration(AbstractJavaScriptConfiguration.java:211)
+	at com.gargoylesoftware.htmlunit.javascript.configuration.AbstractJavaScriptConfiguration.buildUsageMap(AbstractJavaScriptConfiguration.java:86)
+	at com.gargoylesoftware.htmlunit.javascript.configuration.AbstractJavaScriptConfiguration.<init>(AbstractJavaScriptConfiguration.java:66)
+	at com.gargoylesoftware.htmlunit.javascript.configuration.JavaScriptConfiguration.<init>(JavaScriptConfiguration.java:594)
+	at com.gargoylesoftware.htmlunit.javascript.configuration.JavaScriptConfiguration.getInstance(JavaScriptConfiguration.java:610)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.<init>(JavaScriptEngine.java:154)
+	at com.gargoylesoftware.htmlunit.WebClient.<init>(WebClient.java:320)
+	at com.gargoylesoftware.htmlunit.WebClient.<init>(WebClient.java:269)
+	at com.gargoylesoftware.htmlunit.WebClient.<init>(WebClient.java:259)
+	at com.gargoylesoftware.htmlunit.WebClient.<init>(WebClient.java:251)
+	at org.springframework.boot.test.web.htmlunit.LocalHostWebClient.<init>(LocalHostWebClient.java:39)
+	at org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration.mockMvcWebClientBuilder(MockMvcWebClientAutoConfiguration.java:49)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272)
+	at java.base/java.util.Optional.orElseGet(Optional.java:362)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:101)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+Caused by: java.io.IOException: Error while instrumenting com/gargoylesoftware/htmlunit/javascript/host/css/StyleAttributes$Definition.
+	at org.jacoco.agent.rt.internal_3570298.core.instr.Instrumenter.instrumentError(Instrumenter.java:160)
+	at org.jacoco.agent.rt.internal_3570298.core.instr.Instrumenter.instrument(Instrumenter.java:110)
+	at org.jacoco.agent.rt.internal_3570298.CoverageTransformer.transform(CoverageTransformer.java:92)
+	... 137 more
+Caused by: org.jacoco.agent.rt.internal_3570298.asm.MethodTooLargeException: Method too large: com/gargoylesoftware/htmlunit/javascript/host/css/StyleAttributes$Definition.<clinit> ()V
+	at org.jacoco.agent.rt.internal_3570298.asm.MethodWriter.computeMethodInfoSize(MethodWriter.java:2087)
+	at org.jacoco.agent.rt.internal_3570298.asm.ClassWriter.toByteArray(ClassWriter.java:489)
+	at org.jacoco.agent.rt.internal_3570298.core.instr.Instrumenter.instrument(Instrumenter.java:91)
+	at org.jacoco.agent.rt.internal_3570298.core.instr.Instrumenter.instrument(Instrumenter.java:108)
+	... 138 more
+]]></system-err>
+</testsuite>

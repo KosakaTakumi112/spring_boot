@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">app</a> &gt; <a href="index.source.html" class="el_package">com.example.app.controller</a> &gt; <span class="el_source">UserController.java</span></div><h1>UserController.java</h1><pre class="source lang-java linenums">package com.example.app.controller;
 
-// import org.springframework.beans.factory.annotation.Autowired;
-// import org.springframework.web.bind.annotation.RequestMapping;
-// import org.springframework.stereotype.Controller;
-// import org.springframework.ui.Model;
-
-// import com.example.app.repository.UserRepository;
-
-// @Controller
-// public class UserController {
-
-// private final UserRepository repository;
-
-// @Autowired
-// public UserController(UserRepository repository) {
-// this.repository = repository;
-// }
-
-// @RequestMapping(&quot;/users&quot;)
-// public String users(Model model) {
-// model.addAttribute(&quot;users&quot;, repository.findAll());
-// return &quot;users&quot;;
-// }
-
-// }
+import com.example.app.entity.ContactForm;
 
 import java.util.List;
 
@@ -45,20 +22,21 @@ import com.example.app.service.UserService;
 
 @Controller
 @RequestMapping(&quot;/users&quot;) // ①
-<span class="fc" id="L48">public class UserController {</span>
+<span class="fc" id="L25">public class UserController {</span>
   @Autowired
   private UserService userService;
 
   @GetMapping
   public String index(Model model) { // ②
-<span class="nc" id="L54">    List&lt;User&gt; users = userService.findAll();</span>
-<span class="nc" id="L55">    model.addAttribute(&quot;users&quot;, users); // ③</span>
-<span class="nc" id="L56">    return &quot;users/index&quot;; // ④</span>
+<span class="fc" id="L31">    List&lt;User&gt; users = userService.findAll();</span>
+<span class="fc" id="L32">    model.addAttribute(&quot;users&quot;, users); // ③</span>
+<span class="fc" id="L33">    return &quot;users/index&quot;; // ④</span>
   }
 
   @GetMapping(&quot;new&quot;)
-  public String newUser(Model model) {
-<span class="nc" id="L61">    return &quot;users/new&quot;;</span>
+  public String newForm(Model model) {
+<span class="fc" id="L38">    model.addAttribute(&quot;contactForm&quot;, new ContactForm());</span>
+<span class="fc" id="L39">    return &quot;users/new&quot;;</span>
   }
 
   // @GetMapping(&quot;{id}/edit&quot;)
@@ -68,12 +46,12 @@ import com.example.app.service.UserService;
   // return &quot;users/edit&quot;;
   // }
 
-  @GetMapping(&quot;{id}&quot;)
-  public String show(@PathVariable Long id, Model model) {
-<span class="nc" id="L73">    Optional&lt;User&gt; user = userService.findOne(id);</span>
-<span class="nc" id="L74">    model.addAttribute(&quot;user&quot;, user);</span>
-<span class="nc" id="L75">    return &quot;users/show&quot;;</span>
-  }
+  // @GetMapping(&quot;{id}&quot;)
+  // public String show(@PathVariable Long id, Model model) {
+  // Optional&lt;User&gt; user = userService.findOne(id);
+  // model.addAttribute(&quot;user&quot;, user);
+  // return &quot;users/show&quot;;
+  // }
 
   @PostMapping(&quot;confirm&quot;)
   public String confirm(
@@ -82,16 +60,16 @@ import com.example.app.service.UserService;
       @RequestParam String inquiry,
 
       Model model) {
-<span class="nc" id="L85">    model.addAttribute(&quot;name&quot;, name);</span>
-<span class="nc" id="L86">    model.addAttribute(&quot;email&quot;, email);</span>
-<span class="nc" id="L87">    model.addAttribute(&quot;inquiry&quot;, inquiry);</span>
-<span class="nc" id="L88">    return &quot;users/confirm&quot;;</span>
+<span class="fc" id="L63">    model.addAttribute(&quot;name&quot;, name);</span>
+<span class="fc" id="L64">    model.addAttribute(&quot;email&quot;, email);</span>
+<span class="fc" id="L65">    model.addAttribute(&quot;inquiry&quot;, inquiry);</span>
+<span class="fc" id="L66">    return &quot;users/confirm&quot;;</span>
   }
 
   @PostMapping
   public String create(@ModelAttribute User user) {
-<span class="nc" id="L93">    userService.save(user);</span>
-<span class="nc" id="L94">    return &quot;users/complete&quot;;</span>
+<span class="fc" id="L71">    userService.save(user);</span>
+<span class="fc" id="L72">    return &quot;users/complete&quot;;</span>
   }
 
   // @PutMapping(&quot;{id}&quot;)
@@ -99,10 +77,10 @@ import com.example.app.service.UserService;
   // player.setId(id);
   // ; return }
 
-  @DeleteMapping(&quot;{id}&quot;)
-  public String destroy(@PathVariable Long id) {
-<span class="nc" id="L104">    userService.delete(id);</span>
-<span class="nc" id="L105">    return &quot;redirect:/users&quot;;</span>
-  }
+  // @DeleteMapping(&quot;{id}&quot;)
+  // public String destroy(@PathVariable Long id) {
+  // userService.delete(id);
+  // return &quot;redirect:/users&quot;;
+  // }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

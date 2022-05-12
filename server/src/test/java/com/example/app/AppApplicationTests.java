@@ -22,7 +22,8 @@ public class AppApplicationTests {
 
 	@Test
 	public void testHello() {
-		assertThat(restTemplate.getForObject("http://localhost:" + port, String.class), is("Hello World!"));
+	assertThat(restTemplate.getForObject("http://localhost:" + port,
+	String.class), is("Hello World!"));
 	}
 
 }

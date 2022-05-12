@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - CombineTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>CombineTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.example.app.controller.html">com.example.app.controller</a> &gt; CombineTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">5.448s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">結合テスト()</td>
+<td class="success">5.448s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2022-05-12 04:15:32.023  INFO 539 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.app.controller.CombineTests], using SpringBootContextLoader
+2022-05-12 04:15:32.034  INFO 539 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.app.controller.CombineTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-05-12 04:15:32.036  INFO 539 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.app.controller.CombineTests]: CombineTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-05-12 04:15:32.082  INFO 539 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.app.AppApplication for test class com.example.app.controller.CombineTests
+2022-05-12 04:15:32.086  INFO 539 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-05-12 04:15:32.088  INFO 539 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@798cc1c4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5db2b6ff, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@176a77c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@47035f8a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@589e244f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@105374ed, org.springframework.test.context.transaction.TransactionalTestExecutionListener@242a7cdc, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@790888dc, org.springframework.test.context.event.EventPublishingTestExecutionListener@509d77ee, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5be2850c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2c59de30, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@11aafd0f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2ab3cad3, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6536f06c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@77c1aa4]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.7)
+
+2022-05-12 04:15:32.466  INFO 539 --- [    Test worker] com.example.app.controller.CombineTests  : Starting CombineTests using Java 15.0.2 on d36963f9b121 with PID 539 (started by root in /srv)
+2022-05-12 04:15:32.472  INFO 539 --- [    Test worker] com.example.app.controller.CombineTests  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2022-05-12 04:15:34.666  INFO 539 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-12 04:15:34.749  INFO 539 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 1 JPA repository interfaces.
+2022-05-12 04:15:36.090  INFO 539 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-05-12 04:15:36.093  INFO 539 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-12 04:15:36.096  INFO 539 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-12 04:15:36.138  INFO 539 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-05-12 04:15:36.140  INFO 539 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3620 ms
+2022-05-12 04:15:36.915  INFO 539 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-05-12 04:15:36.942  INFO 539 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-05-12 04:15:37.116  INFO 539 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-12 04:15:37.331  INFO 539 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-12 04:15:37.540  INFO 539 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-12 04:15:37.541  INFO 539 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-12 04:15:38.671  WARN 539 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-12 04:15:39.421 DEBUG 539 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-05-12 04:15:39.606 TRACE 539 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.e.a.AppApplication:
+	{ [/]}: helloWorld()
+2022-05-12 04:15:39.611 TRACE 539 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.e.a.c.UserController:
+	{GET [/users]}: index(Model)
+	{GET [/users/new]}: newForm(Model)
+	{POST [/users]}: create(User)
+	{POST [/users/confirm]}: confirm(String,String,String,Model)
+2022-05-12 04:15:39.615 TRACE 539 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2022-05-12 04:15:39.621 DEBUG 539 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2022-05-12 04:15:39.664  INFO 539 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-12 04:15:40.001 DEBUG 539 --- [    Test worker] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2022-05-12 04:15:40.086 TRACE 539 --- [    Test worker] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2022-05-12 04:15:40.197 TRACE 539 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2022-05-12 04:15:40.200 TRACE 539 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2022-05-12 04:15:40.201 DEBUG 539 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-05-12 04:15:40.309 DEBUG 539 --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-05-12 04:15:41.974  INFO 539 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 34083 (http) with context path ''
+2022-05-12 04:15:41.980  INFO 539 --- [    Test worker] com.example.app.controller.CombineTests  : Started CombineTests in 9.923 seconds (JVM running for 90.469)
+2022-05-12 04:15:43.477 TRACE 539 --- [    Test worker] o.s.w.r.f.client.ExchangeFunctions       : [7c15638d] HTTP GET http://localhost:34083/users/new, headers={masked}
+2022-05-12 04:15:45.541  INFO 539 --- [o-auto-2-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-12 04:15:45.544  INFO 539 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-12 04:15:45.547 TRACE 539 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.multipart.support.StandardServletMultipartResolver@20c6e09f
+2022-05-12 04:15:45.548 TRACE 539 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@6f1a398
+2022-05-12 04:15:45.550 TRACE 539 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.theme.FixedThemeResolver@51a7322
+2022-05-12 04:15:45.552 TRACE 539 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Detected DefaultRequestToViewNameTranslator
+2022-05-12 04:15:45.556 TRACE 539 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Detected SessionFlashMapManager
+2022-05-12 04:15:45.557 DEBUG 539 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-05-12 04:15:45.559  INFO 539 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2022-05-12 04:15:45.561 TRACE 539 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : GET &quot;/users/new&quot;, parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2022-05-12 04:15:45.566 TRACE 539 --- [o-auto-2-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.app.controller.UserController#newForm(Model)
+2022-05-12 04:15:45.612 TRACE 539 --- [o-auto-2-exec-1] o.s.web.method.HandlerMethod             : Arguments: [{}]
+2022-05-12 04:15:45.673 TRACE 539 --- [o-auto-2-exec-1] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2022-05-12 04:15:45.771 DEBUG 539 --- [o-auto-2-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*' given [*/*]
+2022-05-12 04:15:45.773 TRACE 539 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Rendering view [org.thymeleaf.spring5.view.ThymeleafView@772f12ec] 
+2022-05-12 04:15:48.152 DEBUG 539 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2022-05-12 04:15:48.242 TRACE 539 --- [or-http-epoll-2] o.s.w.r.f.client.ExchangeFunctions       : [7c15638d] [4fac1b60-1] Response 200 OK, headers={masked}
+2022-05-12 04:15:48.320 TRACE 539 --- [    Test worker] o.s.w.r.f.client.ExchangeFunctions       : [6f62db9c] HTTP POST http://localhost:34083/users/confirm, headers={masked}
+2022-05-12 04:15:48.328 TRACE 539 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [6f62db9c] Writing form fields [name, email, inquiry] (content masked)
+2022-05-12 04:15:48.402 TRACE 539 --- [o-auto-2-exec-2] o.s.web.servlet.DispatcherServlet        : POST &quot;/users/confirm&quot;, parameters={masked}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2022-05-12 04:15:48.404 TRACE 539 --- [o-auto-2-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.app.controller.UserController#confirm(String, String, String, Model)
+2022-05-12 04:15:48.415 TRACE 539 --- [o-auto-2-exec-2] o.s.web.method.HandlerMethod             : Arguments: [combinetest3, combinetest3@email.com, 結合テスト3です。, {}]
+2022-05-12 04:15:48.418 TRACE 539 --- [o-auto-2-exec-2] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2022-05-12 04:15:48.422 DEBUG 539 --- [o-auto-2-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*' given [*/*]
+2022-05-12 04:15:48.424 TRACE 539 --- [o-auto-2-exec-2] o.s.web.servlet.DispatcherServlet        : Rendering view [org.thymeleaf.spring5.view.ThymeleafView@1f8794e3] 
+2022-05-12 04:15:48.452 DEBUG 539 --- [o-auto-2-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2022-05-12 04:15:48.453 TRACE 539 --- [or-http-epoll-2] o.s.w.r.f.client.ExchangeFunctions       : [6f62db9c] [4fac1b60-2] Response 200 OK, headers={masked}
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4.1</a> at May 12, 2022, 4:17:04 AM</p>
+</div>
+</div>
+</body>
+</html>
