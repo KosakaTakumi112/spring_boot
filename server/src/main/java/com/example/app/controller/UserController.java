@@ -1,29 +1,6 @@
 package com.example.app.controller;
 
-// import org.springframework.beans.factory.annotation.Autowired;
-// import org.springframework.web.bind.annotation.RequestMapping;
-// import org.springframework.stereotype.Controller;
-// import org.springframework.ui.Model;
-
-// import com.example.app.repository.UserRepository;
-
-// @Controller
-// public class UserController {
-
-// private final UserRepository repository;
-
-// @Autowired
-// public UserController(UserRepository repository) {
-// this.repository = repository;
-// }
-
-// @RequestMapping("/users")
-// public String users(Model model) {
-// model.addAttribute("users", repository.findAll());
-// return "users";
-// }
-
-// }
+import com.example.app.entity.ContactForm;
 
 import java.util.List;
 
@@ -57,7 +34,8 @@ public class UserController {
   }
 
   @GetMapping("new")
-  public String newUser(Model model) {
+  public String newForm(Model model) {
+    model.addAttribute("contactForm", new ContactForm());
     return "users/new";
   }
 
@@ -68,12 +46,12 @@ public class UserController {
   // return "users/edit";
   // }
 
-  @GetMapping("{id}")
-  public String show(@PathVariable Long id, Model model) {
-    Optional<User> user = userService.findOne(id);
-    model.addAttribute("user", user);
-    return "users/show";
-  }
+  // @GetMapping("{id}")
+  // public String show(@PathVariable Long id, Model model) {
+  // Optional<User> user = userService.findOne(id);
+  // model.addAttribute("user", user);
+  // return "users/show";
+  // }
 
   @PostMapping("confirm")
   public String confirm(
@@ -99,9 +77,9 @@ public class UserController {
   // player.setId(id);
   // ; return }
 
-  @DeleteMapping("{id}")
-  public String destroy(@PathVariable Long id) {
-    userService.delete(id);
-    return "redirect:/users";
-  }
+  // @DeleteMapping("{id}")
+  // public String destroy(@PathVariable Long id) {
+  // userService.delete(id);
+  // return "redirect:/users";
+  // }
 }

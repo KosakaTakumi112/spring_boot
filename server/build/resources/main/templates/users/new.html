@@ -15,18 +15,37 @@
   <body>
     <div class="container">
       <h1>New Contact</h1>
-      <form th:action="@{/users/confirm}" th:method="post">
+      <form
+        th:action="@{/users/confirm}"
+        th:object="${contactForm}"
+        th:method="post"
+      >
         <div class="form-group">
           <label class="control-label">名前</label>
-          <input class="form-control" type="text" name="name" />
+          <input
+            class="form-control"
+            type="text"
+            name="name"
+            th:field="*{name}"
+          />
         </div>
         <div class="form-group">
           <label class="control-label">メールアドレス</label>
-          <input class="form-control" type="text" name="email" />
+          <input
+            class="form-control"
+            type="text"
+            name="email"
+            th:field="*{email}"
+          />
         </div>
         <div class="form-group">
           <label class="control-label">お問合せ内容</label>
-          <input class="form-control" type="text" name="inquiry" />
+          <input
+            class="form-control"
+            type="text"
+            name="inquiry"
+            th:field="*{inquiry}"
+          />
         </div>
         <button class="btn btn-primary" type="submit">作成</button>
       </form>
