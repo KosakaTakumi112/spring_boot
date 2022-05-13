@@ -14,6 +14,10 @@
 
 - localhost:8080 にて Hello world が出力される。
 
+## テスト方法
+
+- appコンテナ内にて./gradlew testを実行する。
+
 ## コンテナ停止
 
 - Ctr + C
