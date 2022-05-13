@@ -40,6 +40,7 @@ public class DBSelectTest {
   public void dbから正常にデータを取得できるか() throws Exception {
     List<User> userList = userService.findAll();
 
+    
     // Daoで正常にテーブルからレコードを取得できたか
     assertThat(userList.size(), is(2));
   }
