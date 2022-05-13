@@ -31,7 +31,7 @@ public class UserRepositoryTests {
     @Test
     @DatabaseSetup(value = "/testData/") // 初期状態のDB
     @ExpectedDatabase(value = "/users/create", assertionMode = DatabaseAssertionMode.NON_STRICT)
-    void createメソッドでユーザが新しく生成される() {
+    void お問合せデータがちゃんと保存される() {
         User user = new User();
         user.setName("test4");
         user.setEmail("test4@email.com");

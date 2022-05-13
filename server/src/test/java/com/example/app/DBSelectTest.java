@@ -37,7 +37,7 @@ public class DBSelectTest {
   private UserService userService;
 
   @Test
-  public void contextLoads() throws Exception {
+  public void dbから正常にデータを取得できるか() throws Exception {
     List<User> userList = userService.findAll();
 
     // Daoで正常にテーブルからレコードを取得できたか
